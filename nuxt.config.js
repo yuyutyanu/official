@@ -32,14 +32,14 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
-        config.module.rules.push({
-          test: new RegExp('.stylus'),
-          use:
-            [
-              'stylus-loader'
-            ]
-        })
       }
+      config.module.rules.push({
+        test: new RegExp('.stylus'),
+        use:
+          [
+            'stylus-loader'
+          ]
+      })
     }
   }
 }
