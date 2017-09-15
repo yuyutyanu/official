@@ -3,17 +3,24 @@ import ApolloClient, { createNetworkInterface } from 'apollo-client'
 import gql from 'graphql-tag'
 import moment from 'moment'
 
-export const uri = 'https://api.graphcms.com/simple/v1/pixelgram'
+export const uri = 'https://us-west-2.api.scaphold.io/graphql/pixelgram'
 
 export const networkInterface = createNetworkInterface({uri})
 
 export const client = new ApolloClient({networkInterface})
 
 export const queryAllNews = gql`query {
-  allNews {
-    id
-    content
-    date
+  viewer {
+    allNews {
+      edges {
+        node {
+          id
+          title
+          content
+          date
+        }
+      }
+    }
   }
 }`
 
@@ -30,8 +37,7 @@ export const mutations = {
 export const actions = {
   async queryAllNews ({commit}) {
     const res = await client.query({query: queryAllNews})
-    const allNews = res.data.allNews.map(item => {
-      console.log(item.content)
+    const allNews = res.data.viewer.allNews.edges.map(item => item.node).map(item => {
       const dateYYYYMMDD = moment(item.date).format('YYYY年MM月DD日')
       return {...item, dateYYYYMMDD}
     })

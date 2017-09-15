@@ -16,6 +16,7 @@
           <div class='newsDate'>
             {{news.dateYYYYMMDD}}
           </div>
+          <div class='newsContent' v-text='news.title' />
           <div class='newsContent' v-text='news.content' />
         </div>
       </div>
@@ -29,16 +30,16 @@
   export default {
     computed: {
       allNews () {
-        return this.$store.state.graphcms.allNews
+        return this.$store.state.scaphold.allNews
       }
     },
     methods: {
       ...mapMutations({
-        queryAllNews: 'graphcms/queryAllNews'
+        queryAllNews: 'scaphold/queryAllNews'
       })
     },
     created () {
-      this.$store.dispatch('graphcms/queryAllNews')
+      this.$store.dispatch('scaphold/queryAllNews')
     }
   }
 </script>
