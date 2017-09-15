@@ -38,8 +38,8 @@
         queryAllNews: 'scaphold/queryAllNews'
       })
     },
-    created () {
-      this.$store.dispatch('scaphold/queryAllNews')
+    fetch ({ store, params }) {
+      return store.dispatch('scaphold/queryAllNews')
     }
   }
 </script>
