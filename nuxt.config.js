@@ -25,12 +25,12 @@ module.exports = {
     ** Run ESLINT on save
     */
     extend (config, ctx) {
-      if (ctx.dev && ctx.isClient) {
+      if (ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
-          test: /\.(js|vue)$/,
+          test: new RegExp('(js|vue)$'),
           loader: 'eslint-loader',
-          exclude: /(node_modules)/
+          exclude: new RegExp('(node_modules)')
         })
       }
       config.module.rules.push({
