@@ -38,8 +38,10 @@ export const actions = {
   async queryAllNews ({commit}) {
     const res = await client.query({query: queryAllNews})
     const allNews = res.data.viewer.allNews.edges.map(item => item.node).map(item => {
-      const dateYYYYMMDD = moment(item.date).format('YYYY年MM月DD日')
-      return {...item, dateYYYYMMDD}
+      const day = moment(new Date()).diff(moment(item.date), 'days')
+      const dateYYYYMMDD = moment(item.date).format('YYYY[.]MM[.]DD')
+      const dateDisplay = dateYYYYMMDD + ' ( ' + day + 'd ago' + ' )'
+      return {...item, dateDisplay}
     })
     commit('setAllNews', allNews)
   }
