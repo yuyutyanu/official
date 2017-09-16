@@ -28,21 +28,22 @@ module.exports = {
     ** Run ESLINT on save
     */
     extend (config, ctx) {
-      if (ctx.isClient) {
+      if (ctx.dev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: new RegExp('(js|vue)$'),
-          loader: 'eslint-loader',
           exclude: new RegExp('(node_modules)')
         })
       }
-      config.module.rules.push({
-        test: new RegExp('.stylus'),
-        use:
-          [
-            'stylus-loader'
-          ]
-      })
+      if (ctx.isClient) {
+        config.module.rules.push({
+          test: new RegExp('.stylus'),
+          use:
+            [
+              'stylus-loader'
+            ]
+        })
+      }
     }
   }
 }
