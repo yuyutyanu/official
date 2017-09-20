@@ -1,47 +1,102 @@
 <template>
   <div class='root'>
-    <nuxt-link class='link' to='/'>
-      home
-    </nuxt-link>
-    <nuxt-link class='link' to='/news'>
-      news
-    </nuxt-link>
-    <nuxt-link class='link' to='/about'>
-      about
-    </nuxt-link>
-    <a
-        class='link'
-        target='_blank'
-        href='https://medium.com/websocket'>
-      Medium
-    </a>
-    <a
-        class='link'
-        target='_blank'
-        href='https://github.com/pixelgram-jp'>
-      GitHub
-    </a>
+    <div class='scroll'>
+      <div class='link-root'>
+        <nuxt-link class='link' to='/'>
+          home
+        </nuxt-link>
+      </div>
+      <div class='link-root'>
+        <nuxt-link class='link' to='/news'>
+          news
+        </nuxt-link>
+      </div>
+      <div class='link-root'>
+        <a
+            class='link'
+            target='_blank'
+            href='https://medium.com/websocket'>
+          Medium
+        </a>
+      </div>
+      <div class='link-root'>
+        <a
+            class='link'
+            target='_blank'
+            href='https://github.com/pixelgram-jp'>
+          GitHub
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
 <style lang='stylus' scoped>
   .root {
-    padding-top 10px
+    z-index 120
   }
 
-  .link {
-    margin 0 0 0 10px
-    text-decoration none
-    font-size 1.2rem
-    padding 2px 10px
-    border-radius 2px
+  @media screen and (max-width: 959.99px) {
+    .root {
+      position fixed
+      top 60px
+      left 0
+      padding-top 20px
+      padding-left 10px
+      padding-right 10px
+      width 100%
+      overflow-x auto
+      overflow-y hidden
+      -webkit-overflow-scrolling touch
+      background rgba(245, 245, 245, 0.98)
+    }
+
+    .scroll {
+      width 600px
+    }
+
+    .link-root {
+      display inline-block
+      padding 10px 10px
+    }
+
+    .link {
+      text-decoration none
+      font-size 2rem
+      letter-spacing 2px
+      color #0f2350
+    }
+  }
+
+  // pc
+  @media screen and (min-width: 960px) {
+    .root {
+      position fixed
+      top 0
+      left 0
+      padding-top 150px
+      padding-left 40px
+      width 200px
+      height 100%
+    }
+
+    .link-root {
+      margin 10px 0
+    }
+
+    .link {
+      text-decoration none
+      font-size 2.5rem
+      letter-spacing 2px
+      color #0f2350
+    }
   }
 
   .link:hover {
-    color tomato
+    color #64FFDA
   }
 
   .nuxt-link-exact-active {
-    color tomato
+    color #64FFDA
   }
 </style>

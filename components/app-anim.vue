@@ -2,23 +2,26 @@
   <canvas class='canvas' />
 </template>
 
-<style>
+<style lang='stylus' scoped>
   .canvas {
-    width: 100%
+    position fixed
+    left 0
+    right 0
+    bottom 0
+    width 100%
+    z-index -1
   }
 </style>
 
 <script>
   export default {
     created () {
-      console.log('created')
       if (isNotRender && process.browser) {
         isNotRender = false
         createAnimationFrame()
       }
     },
     destroyed () {
-      console.log('destroyed')
       destroyAnimationFrame()
     }
   }
@@ -44,8 +47,8 @@
 
   const model = (context) => {
     return {
-      color: '#0091EA',
-      size: 0.5,
+      color: '#64FFDA',
+      size: 2.5,
       yOff: Math.random(10)
     }
   }

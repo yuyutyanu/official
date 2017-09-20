@@ -1,7 +1,11 @@
 <template>
   <div class='root'>
     <app-title title='pixelgram' />
-    <img class='logo' src='/logo.png' />
+    <div class='note'>
+      <p>
+        会社についての説明。
+      </p>
+    </div>
     <app-news :src='allNews' />
   </div>
 </template>
@@ -45,20 +49,11 @@
 </script>
 
 <style lang='stylus' scoped>
-  .title {
+  .note {
+    margin auto
+    max-width 500px
     padding-top 40px
-  }
-
-  .text-title {
-    font-weight 300
-    margin 0
-    font-size 3.2em
-    text-align center
-  }
-
-  .logo {
-    display block
-    width 140px
-    margin 40px auto 0
+    padding-left 10px
+    padding-right 10px
   }
 </style>

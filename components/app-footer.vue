@@ -10,6 +10,7 @@
   .root {
     width 100%
     padding-top 80px
+    padding-bottom 20px
   }
 
   p.footer {

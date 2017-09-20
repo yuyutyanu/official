@@ -33,7 +33,7 @@
 
   p.content {
     word-wrap break-word
-    white-space normal
+    white-space pre
     display block
   }
 </style>

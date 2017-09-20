@@ -1,19 +1,27 @@
 <template>
   <div>
+    <app-header />
     <app-menu />
-    <nuxt />
+    <div class='app-content'>
+      <nuxt />
+    </div>
+    <app-anim />
     <app-footer />
   </div>
 </template>
 
 <script>
+  import appAnim from '~/components/app-anim'
   import appFooter from '~/components/app-footer'
+  import appHeader from '~/components/app-header'
   import appMenu from '~/components/app-menu'
 
   export default {
     components: {
-      'app-menu': appMenu,
-      'app-footer': appFooter
+      'app-anim': appAnim,
+      'app-footer': appFooter,
+      'app-header': appHeader,
+      'app-menu': appMenu
     },
     head () {
       return {
@@ -37,10 +45,26 @@
     color #0f2350
     word-spacing 1.5px
     box-sizing border-box
+    background whitesmoke
   }
 
-  *, *before, *after {
+  *, * before, * after {
     box-sizing border-box
     margin 0
   }
+
+  // md up
+  @media screen and (min-width: 960px) {
+    .app-content {
+      padding-left 200px
+    }
+  }
+
+  // md down
+  @media screen and (max-width: 959.99px) {
+    .app-content {
+      padding-top (60 + 78)px
+    }
+  }
+
 </style>

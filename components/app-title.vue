@@ -17,6 +17,13 @@
     padding-top 40px
   }
 
+  // md up
+  @media screen and (min-width: 960px) {
+    .root {
+      display none
+    }
+  }
+
   .text-title {
     font-weight 300
     margin 0
