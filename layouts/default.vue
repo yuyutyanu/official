@@ -45,7 +45,8 @@
     color #0f2350
     word-spacing 1.5px
     box-sizing border-box
-    // background whitesmoke
+    background-image url(/grid/grid12.png);
+    background-color #f5f5f5;
   }
 
   *, * before, * after {

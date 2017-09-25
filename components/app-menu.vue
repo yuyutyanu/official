@@ -58,6 +58,7 @@
       overflow-y hidden
       -webkit-overflow-scrolling touch
       background rgba(245, 245, 245, 0.98)
+      box-shadow 0 2px 2px 0 rgba(0,0,0,.1);
     }
 
     .scroll {
