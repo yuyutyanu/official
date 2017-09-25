@@ -63,7 +63,7 @@
   // md down
   @media screen and (max-width: 959.99px) {
     .app-content {
-      padding-top (60 + 78)px
+      padding-top (50 + 39)px
     }
   }
 

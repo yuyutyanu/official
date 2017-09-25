@@ -20,7 +20,7 @@
 
 <style lang='stylus' scoped>
   .root {
-    padding-top 20px
+    padding-top 10px
     padding-left 20px
     width 100%
     z-index 120
@@ -33,7 +33,7 @@
       top 0
       left 0
       width 100%
-      height 60px
+      height 50px
       background rgba(245, 245, 245, 0.98)
     }
   }
@@ -41,7 +41,7 @@
   .logo {
     display inline-block
     vertical-align middle
-    width 40px
+    width 35px
   }
 
   .title {

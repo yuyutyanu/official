@@ -7,6 +7,11 @@
         </nuxt-link>
       </div>
       <div class='link-root'>
+        <nuxt-link class='link' to='/about'>
+          About
+        </nuxt-link>
+      </div>
+      <div class='link-root'>
         <nuxt-link class='link' to='/news'>
           News
         </nuxt-link>
@@ -23,9 +28,14 @@
         <a
             class='link'
             target='_blank'
-            href='https://github.com/pixelgram-jp'>
+            href='https://github.com/pixelgram'>
           GitHub
         </a>
+      </div>
+      <div class='link-root'>
+        <nuxt-link class='link' to='/contact'>
+          Contact
+        </nuxt-link>
       </div>
     </div>
   </div>
@@ -39,9 +49,8 @@
   @media screen and (max-width: 959.99px) {
     .root {
       position fixed
-      top 60px
+      top 50px
       left 0
-      padding-top 20px
       padding-left 10px
       padding-right 10px
       width 100%
@@ -52,21 +61,37 @@
     }
 
     .scroll {
-      width 600px
+      width 440px
     }
 
     .link-root {
       display inline-block
-      padding 10px 10px
     }
 
     .link {
       text-decoration none
-      font-size 2rem
       letter-spacing 2px
       color #0f2350
+      padding 10px
+      display block
+      position relative
     }
-  }
+
+    .link::after {
+      content ''
+      display block
+      height 2px
+      position absolute
+      width 100%
+      bottom 0
+      left 0
+    }
+
+    .link.nuxt-link-exact-active::after {
+      background-color #009688
+    }
+
+    }
 
   // pc
   @media screen and (min-width: 960px) {
