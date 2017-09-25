@@ -1,6 +1,6 @@
 <template>
   <div class='root'>
-    <app-title title='pixelgram' />
+    <app-title title='Pixelgram' />
     <div class='note'>
       <p>
         会社についての説明。

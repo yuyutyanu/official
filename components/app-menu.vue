@@ -3,12 +3,12 @@
     <div class='scroll'>
       <div class='link-root'>
         <nuxt-link class='link' to='/'>
-          home
+          Home
         </nuxt-link>
       </div>
       <div class='link-root'>
         <nuxt-link class='link' to='/news'>
-          news
+          News
         </nuxt-link>
       </div>
       <div class='link-root'>
@@ -93,10 +93,10 @@
   }
 
   .link:hover {
-    color #64FFDA
+    color #009688
   }
 
   .nuxt-link-exact-active {
-    color #64FFDA
+    color #009688
   }
 </style>

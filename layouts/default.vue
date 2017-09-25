@@ -45,7 +45,7 @@
     color #0f2350
     word-spacing 1.5px
     box-sizing border-box
-    background whitesmoke
+    // background whitesmoke
   }
 
   *, * before, * after {
