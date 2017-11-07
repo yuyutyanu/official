@@ -33,9 +33,12 @@
         </a>
       </div>
       <div class='link-root'>
-        <nuxt-link class='link' to='/contact'>
+         <a
+            class='link'
+            target='_blank'
+            href='https://github.com/pixelgram'>
           Contact
-        </nuxt-link>
+        </a>
       </div>
     </div>
   </div>

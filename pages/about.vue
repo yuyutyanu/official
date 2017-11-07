@@ -11,7 +11,7 @@
     },
     head () {
       return {
-        title: 'pixelgram / about'
+        title: 'About | Pixelgram'
       }
     }
   }

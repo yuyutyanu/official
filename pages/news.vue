@@ -23,12 +23,7 @@
     },
     head () {
       return {
-        title: 'pixelgram / news',
-        meta: [{
-          hid: 'description',
-          name: 'description',
-          content: 'no description'
-        }]
+        title: 'News | Pixelgram'
       }
     },
     fetch ({store, params}) {
