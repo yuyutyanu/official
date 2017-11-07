@@ -49,7 +49,7 @@
   @media screen and (max-width: 959.99px) {
     .root {
       position fixed
-      top 50px
+      top 45px
       left 0
       padding-left 10px
       padding-right 10px
@@ -112,7 +112,7 @@
 
     .link {
       text-decoration none
-      font-size 2.5rem
+      font-size 1.5rem
       letter-spacing 2px
       color #0f2350
     }

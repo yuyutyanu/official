@@ -1,20 +1,14 @@
 <template>
   <div class='root'>
-    <img class='logo' src='/logo.png' />
-    <a class='title'>
-      Pixelgram {{page}}
+    <nuxt-link class='link' to='/'>
+      <img class="title" src="/logo-name.svg" alt="">
+    </nuxt-link>
     </a>
   </div>
 </template>
 
 <script>
   export default {
-    computed: {
-      page: function () {
-        if (this.$nuxt.$route.name === 'index') return ''
-        return '/ ' + this.$nuxt.$route.name
-      }
-    }
   }
 </script>
 
@@ -23,7 +17,8 @@
     padding-top: 10px;
     padding-left: 20px;
     width: 100%;
-    z-index: 100;
+    z-index: 130;
+    position: relative;
   }
 
   @media screen and (max-width: 959.99px) {
@@ -32,22 +27,14 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 50px;
+      height: 45px;
       background: rgba(245, 245, 245, 0.98);
     }
   }
-
-  .logo {
+  .link {
     display: inline-block;
-    vertical-align: middle;
-    width: 35px;
   }
-
   .title {
-    display: inline-block;
-    vertical-align: middle;
-    padding-left: 10px;
-    font-size: 1.5rem;
-    color: #000;
+    height: 30px;
   }
 </style>
