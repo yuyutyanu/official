@@ -47,7 +47,7 @@
 
   const model = (context) => {
     return {
-      color: '#009688',
+      color: '#000',
       size: 2.5,
       yOff: Math.random(10)
     }

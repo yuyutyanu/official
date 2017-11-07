@@ -11,12 +11,7 @@
     },
     head () {
       return {
-        title: 'pixelgram / about',
-        meta: [{
-          hid: 'description',
-          name: 'description',
-          content: 'no description'
-        }]
+        title: 'pixelgram / about'
       }
     }
   }
