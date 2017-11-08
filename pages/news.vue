@@ -1,6 +1,5 @@
 <template>
   <div class='root'>
-    <app-title title='news' />
     <div>
       <app-news :src='allNews' />
     </div>

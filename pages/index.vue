@@ -1,23 +1,17 @@
 <template>
   <div class='root'>
-    <app-title title='Pixelgram' />
-    <div class='note'>
-      <p>
-        会社についての説明。
-      </p>
-    </div>
-    <app-news :src='allNews' />
+    <section class='contents'>
+      <h1 class="contents__copy">Pixelgramはインターネットにあなたの居場所を作ります</h1>
+    </section>
   </div>
 </template>
 
 <script>
   import { mapMutations } from 'vuex'
-  import appTitle from '~/components/app-title'
   import appNews from '~/components/app-news'
 
   export default {
     components: {
-      'app-title': appTitle,
       'app-news': appNews
     },
     computed: {
@@ -43,12 +37,16 @@
   }
 </script>
 
-<style lang='stylus' scoped>
-  .note {
-    margin auto
-    max-width 500px
-    padding-top 40px
-    padding-left 10px
-    padding-right 10px
+<style scoped>
+  .root {
+    padding: 0 10px;
+  }
+  .contents {
+    padding: 150px 10px;
+  }
+  .contents__copy {
+    font-size: 1rem;
+    line-height: 2;
   }
 </style>
+

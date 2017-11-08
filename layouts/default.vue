@@ -33,38 +33,36 @@
   }
 </script>
 
-<style lang='stylus'>
+<style>
   html {
-    font-family 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif
-    font-size 15px
-    -ms-text-size-adjust 100%
-    -webkit-text-size-adjust 100%
-    -webkit-font-smoothing antialiased
-    -moz-osx-font-smoothing grayscale
-    -webkit-font-smoothing antialiased
-    color #0f2350
-    word-spacing 1.5px
-    box-sizing border-box
-    background-image url(/grid/grid12.png);
-    background-color #f5f5f5;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 15px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #000;
+    word-spacing: 1.5px;
+    box-sizing: border-box;
+    background-image: url(/grid/grid12.png);
+    background-color: #f5f5f5;
   }
 
   *, * before, * after {
-    box-sizing border-box
-    margin 0
+    box-sizing: border-box;
+    margin: 0;
   }
 
-  // md up
   @media screen and (min-width: 960px) {
     .app-content {
-      padding-left 200px
+      padding-left: 200px;
     }
   }
 
-  // md down
   @media screen and (max-width: 959.99px) {
     .app-content {
-      padding-top (50 + 39)px
+      padding-top: calc(50 + 39)px;
     }
   }
 

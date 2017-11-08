@@ -35,8 +35,7 @@
       <div class='link-root'>
          <a
             class='link'
-            target='_blank'
-            href='https://github.com/pixelgram'>
+            href='mailto:info@pixelgram.jp'>
           Contact
         </a>
       </div>
@@ -103,7 +102,7 @@
       position fixed
       top 0
       left 0
-      padding-top 150px
+      padding-top 100px
       padding-left 40px
       width 200px
       height 100%
@@ -117,15 +116,15 @@
       text-decoration none
       font-size 1.5rem
       letter-spacing 2px
-      color #0f2350
+      color #676767
     }
   }
 
   .link:hover {
-    color #009688
+    color #000
   }
 
   .nuxt-link-exact-active {
-    color #009688
+    color #000
   }
 </style>
