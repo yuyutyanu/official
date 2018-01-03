@@ -29,9 +29,9 @@ module.exports = {
     ogDescription: '合同会社ピクセルグラム（Pixelgram LLC）はウェブサイトやサービスの企画・運営・開発を行っています。'
   },
   manifest: {
-    name: 'Pixelgram | 合同会社ピクセルグラム',
+    name: 'Pixelgram',
     short_name: 'Pixelgram',
-    start_url: '.',
+    start_url: '/',
     display: 'standalone',
     background_color: '#fff',
     description: '合同会社ピクセルグラム（Pixelgram LLC）はウェブサイトやサービスの企画・運営・開発を行っています。'
