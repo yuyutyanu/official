@@ -3,6 +3,7 @@
     <app-mv />
     <app-policy />
     <app-news />
+    <app-about />
   </div>
 </template>
 
@@ -10,11 +11,13 @@
   import appMv from '~/components/app-mv'
   import appPolicy from '~/components/app-policy'
   import appNews from '~/components/app-news'
+  import appAbout from '~/components/app-about'
   export default {
     components: {
       appMv,
       appPolicy,
-      appNews
+      appNews,
+      appAbout
     }
   }
 </script>

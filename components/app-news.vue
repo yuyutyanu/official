@@ -67,6 +67,7 @@ export default {
   .root {
     background: #fff;
     padding: 120px 0;
+    border-bottom: dotted 2px #999999;
   }
   .inner {
     max-width: 652px;
