@@ -8,7 +8,7 @@
         月まで届く可能性を求めて。
       </div>
       <div class="moon">
-        <img src="/tuki_policy.svg" alt="">
+        <img src="/tuki_policy.svg" alt="moon">
       </div>
     </div>
   </div>

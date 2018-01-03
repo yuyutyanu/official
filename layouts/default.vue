@@ -45,5 +45,7 @@
     box-sizing: border-box;
     margin: 0;
     max-width: 100%;
+    text-decoration: none;
+    color: #000;
   }
 </style>
