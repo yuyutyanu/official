@@ -46,4 +46,9 @@
     text-decoration: none;
     color: #000;
   }
+
+  ::selection {
+    background: #009688;
+    color: #fff;
+  }
 </style>

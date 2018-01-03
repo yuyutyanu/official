@@ -72,7 +72,7 @@
   .link .url{
     color: #fff;
     font-size: 12px;
-    margin-top: 10px;
+    margin-top: 15px;
   }
   .link .url span {
     color: #009688;

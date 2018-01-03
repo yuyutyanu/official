@@ -87,6 +87,9 @@
   .link .href {
     margin-left: 30px;
   }
+  .link .href:hover {
+    color: #009688;
+  }
   @media screen and (max-width: 600px){
     .product {
       flex-direction: column !important;
