@@ -1,7 +1,9 @@
 <template>
   <div class="root">
+    <canvas />
     <div class="moon"></div>
     <div class="copy"></div>
+    <div class="scroll"></div>
   </div>
 </template>
 
@@ -30,6 +32,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-size: contain;
+  }
+  .scroll {
+    background: url('/scroll.svg') no-repeat;
+    width: 35px;
+    height: 31px;
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
   }
   @media screen and (max-width: 600px) {
     .root {
