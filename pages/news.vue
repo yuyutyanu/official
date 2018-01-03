@@ -27,7 +27,7 @@
     },
     fetch ({store, params}) {
       if (!store.state.scaphold.allNews) {
-        return store.dispatch('scaphold/queryAllNews')
+        // return store.dispatch('scaphold/queryAllNews')
       }
     }
   }
