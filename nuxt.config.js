@@ -19,6 +19,23 @@ module.exports = {
   workbox: {
     dev: true
   },
+  meta: {
+    mobileAppIOS: true,
+    name: 'Pixelgram | 合同会社ピクセルグラム',
+    description: '合同会社ピクセルグラム（Pixelgram LLC）はウェブサイトやサービスの企画・運営・開発を行っています。',
+    theme_color: '#000',
+    lang: 'ja',
+    ogTitle: 'Pixelgram | 合同会社ピクセルグラム',
+    ogDescription: '合同会社ピクセルグラム（Pixelgram LLC）はウェブサイトやサービスの企画・運営・開発を行っています。'
+  },
+  manifest: {
+    name: 'Pixelgram | 合同会社ピクセルグラム',
+    short_name: 'Pixelgram',
+    start_url: '.',
+    display: 'standalone',
+    background_color: '#fff',
+    description: '合同会社ピクセルグラム（Pixelgram LLC）はウェブサイトやサービスの企画・運営・開発を行っています。'
+  },
   /*
   ** Customize the progress-bar color
   */
