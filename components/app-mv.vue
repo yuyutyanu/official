@@ -3,7 +3,7 @@
     <canvas />
     <div class="moon"></div>
     <div class="copy"></div>
-    <div class="scroll"></div>
+    <div class="scroll" v-scroll-to="'#policy'"></div>
   </div>
 </template>
 

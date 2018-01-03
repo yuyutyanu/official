@@ -1,5 +1,5 @@
 <template>
-  <div class="root">
+  <div id="policy" class="root">
     <div class="inner">
       <app-title title="/ttl_policy.svg" type="white" />
       <div class="copy">

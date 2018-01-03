@@ -13,6 +13,9 @@ module.exports = {
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
     ]
   },
+  plugins: [
+    '~/plugins/scrollto'
+  ],
   modules: [
     '@nuxtjs/pwa'
   ],
