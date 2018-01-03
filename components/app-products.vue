@@ -45,12 +45,17 @@ export default {
   .inner {
     max-width: 980px;
     width: 100%;
-    padding: 0 10px;
+    padding: 0 20px;
     margin: 0 auto;
   }
   .product:not(:last-child) {
     padding-bottom: 40px;
     margin-bottom: 40px;
     border-bottom: dotted 2px #ddd;
+  }
+  @media screen and (max-width: 600px) {
+    .root {
+      padding: 60px 0;
+    }
   }
 </style>

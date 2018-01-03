@@ -87,5 +87,39 @@
   .link .href {
     margin-left: 30px;
   }
+  @media screen and (max-width: 600px){
+    .product {
+      flex-direction: column !important;
+    }
+    .product:nth-child(2n) .image {
+      margin-left: 0;
+    }
+    .product:nth-child(2n-1) .image {
+      margin-right: 0;
+    }
+    .image {
+      max-width: none;
+      text-align: center;
+    }
+    .image img {
+      width: 100%;
+    }
+    .product:nth-child(2n-1) .info {
+      border-left: none;
+      padding: 20px 0 0;
+    }
+    .product:nth-child(2n) .info {
+      border-right: none;
+      padding: 20px 0 0;
+    }
+    .link {
+      text-align: right;
+    }
+    .releasedAt {
+      margin-bottom: 10px;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
 </style>
 

@@ -36,6 +36,9 @@
     margin-bottom: 10px;
     border-bottom: dotted 2px #ddd;
   }
+  .detail {
+    font-size: 12px;
+  }
   .news {
     font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
     margin-bottom: 40px;

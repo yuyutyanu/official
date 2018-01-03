@@ -38,7 +38,7 @@ export default {
   .copy {
     font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
     text-align: center;
-    font-style: 12px;
+    font-size: 12px;
     line-height: 2;
     letter-spacing: 1;
     margin-bottom: 40px;
@@ -46,5 +46,10 @@ export default {
   }
   .moon {
     text-align: center;
+  }
+  @media screen and (max-width: 600px) {
+    .root {
+      padding: 60px 0;
+    }
   }
 </style>

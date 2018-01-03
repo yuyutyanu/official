@@ -51,7 +51,7 @@
   .inner {
     max-width: 980px;
     width: 100%;
-    padding: 0 10px;
+    padding: 0 20px;
     margin: 0 auto;
   }
   .links {
@@ -85,5 +85,28 @@
     color: #8d8d8d;
     font-size: 10px;
     text-align: center;
+  }
+  @media screen and (max-width: 425px) {
+    .root {
+      padding: 0;
+      padding-bottom: 10px;
+    }
+    .links {
+      flex-direction: column;
+    }
+    .link {
+      width: 100%;
+      border-bottom: 1px dotted #999;
+    }
+    .link:not(:last-child) {
+      border-right: none;
+    }
+    .link a {
+      display: block;
+      padding: 40px 0 35px;
+    }
+    .link .url {
+      font-size: 15px;
+    }
   }
 </style>

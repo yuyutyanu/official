@@ -72,19 +72,12 @@ export default {
   .inner {
     max-width: 652px;
     width: 100%;
-    padding: 0 10px;
+    padding: 0 20px;
     margin: 0 auto;
   }
-  .copy {
-    font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
-    text-align: center;
-    font-style: 12px;
-    line-height: 2;
-    letter-spacing: 1;
-    margin-bottom: 40px;
-    color: #fff;
-  }
-  .moon {
-    text-align: center;
+  @media screen and (max-width: 600px){
+    .root {
+      padding: 60px 0;
+    }
   }
 </style>

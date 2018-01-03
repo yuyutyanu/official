@@ -66,7 +66,7 @@ export default {
   .inner {
     max-width: 652px;
     width: 100%;
-    padding: 0 10px;
+    padding: 0 20px;
     margin: 0 auto;
   }
   .about {
@@ -93,6 +93,25 @@ export default {
   }
   .row .name {
     font-weight: bold;
-    width: 90px;
+    min-width: 90px;
+  }
+  @media screen and (max-width: 600px){
+    .root {
+      padding: 60px 0;
+    }
+    .about {
+      flex-direction: column;
+      border-top: none;
+      border-bottom: none;
+      padding: 0;
+    }
+    .logo {
+      padding-right: 0;
+      margin-bottom: 40px;
+    }
+    .info {
+      border-left: none;
+      padding-left: 0;
+    }
   }
 </style>
