@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Pixelgram',
+    title: 'Pixelgram | 合同会社ピクセルグラム',
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
@@ -12,6 +12,12 @@ module.exports = {
     link: [
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
     ]
+  },
+  modules: [
+    '@nuxtjs/pwa'
+  ],
+  workbox: {
+    dev: true
   },
   /*
   ** Customize the progress-bar color
