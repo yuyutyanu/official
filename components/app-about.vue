@@ -7,7 +7,10 @@
           <img src="/logo.svg" alt="">
         </div>
         <div class="info">
-
+          <div v-for="item in about" :key="item.id" class="row">
+            <div class="name">{{item.name}}</div>
+            <div class="value">{{item.value}}</div>
+          </div>
         </div>
       </div>
     </div>
@@ -19,6 +22,37 @@ import appTitle from '~/components/app-title'
 export default {
   components: {
     appTitle
+  },
+  computed: {
+    // @TODO cms 切り替え
+    about () {
+      return [
+        {
+          name: '代表者',
+          value: '上平 千晶'
+        },
+        {
+          name: '資本金',
+          value: '10万円'
+        },
+        {
+          name: '従業員',
+          value: '3人'
+        },
+        {
+          name: '本社所在地',
+          value: '〒673-0862 兵庫県明石市松ヶ丘1-19-7'
+        },
+        {
+          name: '設立',
+          value: '2017.10.16'
+        },
+        {
+          name: '事業内容',
+          value: 'Webサイト・Webサービスの企画・製作・開発・運営'
+        },
+      ]
+    }
   }
 }
 </script>
@@ -40,9 +74,25 @@ export default {
     border-bottom: dotted 2px #dddddd;
     padding:  40px 0;
     display: flex;
+    align-items: center
   }
   .logo {
-    border-right: dotted 2px #dddddd;
     padding-right: 40px;
+  }
+  .info {
+    border-left: dotted 2px #dddddd;
+    padding-left: 25px;
+  }
+  .row {
+    display: flex;
+    font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    font-size: 12px;
+  }
+  .row:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .row .name {
+    font-weight: bold;
+    width: 90px;
   }
 </style>
