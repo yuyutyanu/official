@@ -2,22 +2,17 @@
   <div>
     <app-header />
     <app-menu />
-    <div class='app-content'>
-      <nuxt />
-    </div>
-    <app-anim />
+    <nuxt />
     <app-footer />
   </div>
 </template>
 
 <script>
-  import appAnim from '~/components/app-anim'
   import appFooter from '~/components/app-footer'
   import appMenu from '~/components/app-menu'
 
   export default {
     components: {
-      'app-anim': appAnim,
       'app-footer': appFooter,
       'app-menu': appMenu
     },

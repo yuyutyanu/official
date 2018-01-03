@@ -1,6 +1,6 @@
 <template>
   <div class="root">
-    <img class="mv" src="mv.jpg" alt="ダミー">
+    <img class="mv" src="/mv.jpg" alt="ダミー">
   </div>
 </template>
 
