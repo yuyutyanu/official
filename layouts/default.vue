@@ -13,14 +13,12 @@
 <script>
   import appAnim from '~/components/app-anim'
   import appFooter from '~/components/app-footer'
-  import appHeader from '~/components/app-header'
   import appMenu from '~/components/app-menu'
 
   export default {
     components: {
       'app-anim': appAnim,
       'app-footer': appFooter,
-      'app-header': appHeader,
       'app-menu': appMenu
     },
     head () {
@@ -45,25 +43,12 @@
     color: #000;
     word-spacing: 1.5px;
     box-sizing: border-box;
-    background-image: url(/grid/grid12.png);
     background-color: #f5f5f5;
   }
 
   *, * before, * after {
     box-sizing: border-box;
     margin: 0;
+    max-width: 100%;
   }
-
-  @media screen and (min-width: 960px) {
-    .app-content {
-      padding-left: 200px;
-    }
-  }
-
-  @media screen and (max-width: 959.99px) {
-    .app-content {
-      padding-top: calc(50 + 39)px;
-    }
-  }
-
 </style>
