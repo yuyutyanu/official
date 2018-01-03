@@ -9,12 +9,10 @@
 
 <script>
   import appFooter from '~/components/app-footer'
-  import appMenu from '~/components/app-menu'
 
   export default {
     components: {
       'app-footer': appFooter,
-      'app-menu': appMenu
     },
     head () {
       return {
