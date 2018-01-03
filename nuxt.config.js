@@ -24,7 +24,7 @@ module.exports = {
   */
   loading: {
     color: '#000',
-    height: '3px'
+    height: '0px'
   },
   /*
   ** Build configuration

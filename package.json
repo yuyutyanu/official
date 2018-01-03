@@ -1,7 +1,7 @@
 {
-  "name": "pixelgram",
+  "name": "Pixelgram",
   "version": "1.0.0",
-  "description": "Nuxt.js project",
+  "description": "official site",
   "author": "pixelgram",
   "scripts": {
     "build": "nuxt build",
