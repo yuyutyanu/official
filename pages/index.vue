@@ -2,8 +2,8 @@
   <div class="root">
     <app-mv />
     <app-policy />
-    <app-news />
-    <app-products />
+    <app-news :news="news" />
+    <app-products :products="products" />
     <app-about />
   </div>
 </template>
@@ -21,6 +21,14 @@
       appNews,
       appProducts,
       appAbout
+    },
+    computed: {
+      news () {
+        return this.$store.state.news
+      },
+      products () {
+        return this.$store.state.products
+      }
     },
     fetch ({store}) {
       if (!store.state.news) {

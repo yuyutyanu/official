@@ -13,15 +13,13 @@
 import appTitle from '~/components/app-title'
 import appProductsItem from '~/components/app-products-item'
 export default {
+  props: [
+    'products'
+  ],
   components: {
     appTitle,
     appProductsItem
   },
-  computed: {
-    pruducts () {
-      return this.$store.state.products
-    }
-  }
 }
 </script>
 

@@ -15,6 +15,9 @@ import appTitle from '~/components/app-title'
 import appNewsItem from '~/components/app-news-item'
 import appPager from '~/components/app-pager'
 export default {
+  props: [
+    'news'
+  ],
   data () {
     return {
       p: 1
@@ -31,9 +34,6 @@ export default {
     }
   },
   computed: {
-    news () {
-      return this.$store.state.news
-    },
     per () {
       return 3
     },
@@ -41,13 +41,17 @@ export default {
       return (this.p - 1) * this.per
     },
     maxCount () {
-      return this.news.length
+      if (this.news) {
+        return this.news.length
+      }
     },
     maxPage () {
       return Math.ceil(this.maxCount / this.per)
     },
     displayNews () {
-      return this.news.slice(this.offset, this.offset + this.per)
+      if (this.news) {
+        return this.news.slice(this.offset, this.offset + this.per)
+      }
     }
   }
 }
