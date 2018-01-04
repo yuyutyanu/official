@@ -1,5 +1,5 @@
 <template>
-  <div class="root">
+  <div id="products" class="root">
     <div class="inner">
       <app-title title="/ttl_products.svg" type="black" />
       <div class="products">

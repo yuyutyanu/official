@@ -13,7 +13,7 @@
           </a>
         </div>
         <div class="link">
-          <a href="https://github.com/pixelgram/" target="_blank">
+          <a href="https://github.com/pixelgram" target="_blank">
             <div class="logo">
               <img src="/ftr_github.svg" alt="mail">
             </div>

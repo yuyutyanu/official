@@ -9,10 +9,12 @@
 
 <script>
   import appLogo from '~/components/app-logo'
+  import appMenu from '~/components/app-menu'
   import appFooter from '~/components/app-footer'
   export default {
     components: {
       appLogo,
+      appMenu,
       appFooter,
     },
   }

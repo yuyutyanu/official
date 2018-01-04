@@ -1,5 +1,5 @@
 <template>
-  <div class="root">
+  <div id="home" class="root">
     <canvas />
     <div class="moon"></div>
     <div class="copy"></div>

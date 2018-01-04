@@ -29,4 +29,8 @@
     width: 100%;
     margin: 0 auto;
   }
+  .logo {
+    position: relative;
+    display: inline-block;
+  }
 </style>
