@@ -30,12 +30,12 @@
         return this.$store.state.products
       }
     },
-    fetch ({store}) {
+    async fetch ({store}) {
       if (!store.state.news) {
-        store.dispatch('fetchNews')
+        await store.dispatch('fetchNews')
       }
       if (!store.state.products) {
-        store.dispatch('fetchProducts')
+        await store.dispatch('fetchProducts')
       }
     }
   }

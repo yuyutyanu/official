@@ -41,17 +41,13 @@ export default {
       return (this.p - 1) * this.per
     },
     maxCount () {
-      if (this.news) {
-        return this.news.length
-      }
+      return this.news.length
     },
     maxPage () {
       return Math.ceil(this.maxCount / this.per)
     },
     displayNews () {
-      if (this.news) {
-        return this.news.slice(this.offset, this.offset + this.per)
-      }
+      return this.news.slice(this.offset, this.offset + this.per)
     }
   }
 }

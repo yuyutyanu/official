@@ -3,7 +3,7 @@
     <div class="inner">
       <app-title title="/ttl_products.svg" type="black" />
       <div class="products">
-        <app-products-item v-for="product in pruducts" :key="product.id" :product="product" />
+        <app-products-item v-for="product in products" :key="product.id" :product="product" />
       </div>
     </div>
   </div>
