@@ -14,7 +14,8 @@ module.exports = {
     ]
   },
   plugins: [
-    '~/plugins/scrollto'
+    '~/plugins/scrollto',
+    { src: '~/plugins/p5.js', ssr: false}
   ],
   modules: [
     '@nuxtjs/pwa'
