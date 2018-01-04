@@ -44,8 +44,6 @@ class Fish {
 
   update () {
     //左向きの魚は左に移動
-    const feeling = this.p.createVector(this.p.random(-0.01,0.01),this.p.random(-0.01,0.01))
-    this.applyForce(feeling)
     if (this.direction === 'LEFT') {
       if (Math.sign(this.velocity.x) != -1) {
         this.velocity.mult(-1, 0)
