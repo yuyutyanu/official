@@ -61,4 +61,9 @@
     color: #222222;
     font-size: 12px;
   }
+  @media screen and (max-width: 600px) {
+    .root {
+      display: none;
+    }
+  }
 </style>
