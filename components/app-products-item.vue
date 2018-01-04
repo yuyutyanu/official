@@ -16,7 +16,7 @@
       <div class="link">
         <span class="text">詳細</span>
         <img src="/arrow_r.svg" alt="">
-        <a class="href" :href="product.href" target="_blank">{{product.href}}</a>
+        <a class="href" :href="product.href" target="_blank" rel="noopener">{{product.href}}</a>
       </div>
     </div>
   </div>

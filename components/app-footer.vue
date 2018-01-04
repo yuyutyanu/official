@@ -13,9 +13,9 @@
           </a>
         </div>
         <div class="link">
-          <a href="https://github.com/pixelgram" target="_blank">
+          <a href="https://github.com/pixelgram" target="_blank" rel="noopener">
             <div class="logo">
-              <img src="/ftr_github.svg" alt="mail">
+              <img src="/ftr_github.svg" alt="GitHub">
             </div>
             <div class="url">
               github.com<span>/pixelgram</span>
@@ -23,9 +23,9 @@
           </a>
         </div>
         <div class="link">
-          <a href="https://medium.com/pixelgram" target="_blank">
+          <a href="https://medium.com/pixelgram" target="_blank" rel="noopener">
             <div class="logo">
-              <img src="/ftr_medium.svg" alt="mail">
+              <img src="/ftr_medium.svg" alt="Medium">
             </div>
             <div class="url">
               medium.com<span>/pixelgram</span>

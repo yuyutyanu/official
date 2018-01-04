@@ -18,12 +18,12 @@
           About
         </div>
         <div class="link">
-          <a href="https://github.com/pixelgram" target="_blank">
+          <a href="https://github.com/pixelgram" target="_blank" rel="noopener">
           GitHub
           </a>
         </div>
         <div class="link">
-          <a href="https://medium.com/pixelgram" target="_blank">
+          <a href="https://medium.com/pixelgram" target="_blank" rel="noopener">
             Medium
           </a>
         </div>

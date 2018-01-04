@@ -51,8 +51,9 @@ export default {
     font-size: 12px;
     padding: 5px;
     margin: 0 5px;
+    font-weight: bold;
   }
   .number:hover, .number.current {
-    color: #009688;
+    color: #005f56;
   }
 </style>

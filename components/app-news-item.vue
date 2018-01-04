@@ -24,7 +24,7 @@
 
 <style scoped>
   .publishedAt {
-    color: #999999;
+    color: #000;
     font-size: 10px;
     margin-bottom: 5px;
   }
