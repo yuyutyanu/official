@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <app-header />
+  <div class="root">
+    <app-logo />
     <app-menu />
     <nuxt />
     <app-footer />
@@ -8,25 +8,20 @@
 </template>
 
 <script>
+  import appLogo from '~/components/app-logo'
+  import appMenu from '~/components/app-menu'
   import appFooter from '~/components/app-footer'
-
   export default {
     components: {
-      'app-footer': appFooter,
+      appLogo,
+      appMenu,
+      appFooter,
     },
-    head () {
-      return {
-        link: [
-          {rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono'}
-        ]
-      }
-    }
   }
 </script>
 
 <style>
   html {
-    font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
     font-size: 15px;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -36,7 +31,7 @@
     color: #000;
     word-spacing: 1.5px;
     box-sizing: border-box;
-    background-color: #f5f5f5;
+    background-color: #fff;
   }
 
   *, * before, * after {
@@ -50,5 +45,9 @@
   ::selection {
     background: #009688;
     color: #fff;
+  }
+
+  .root {
+    position: relative;
   }
 </style>

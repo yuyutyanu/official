@@ -1,9 +1,9 @@
 <template>
-  <div class="root">
+  <div id="products" class="root">
     <div class="inner">
       <app-title title="/ttl_products.svg" type="black" />
       <div class="products">
-        <app-products-item v-for="product in pruducts" :key="product.id" :product="product" />
+        <app-products-item v-for="product in products" :key="product.id" :product="product" />
       </div>
     </div>
   </div>
@@ -13,25 +13,13 @@
 import appTitle from '~/components/app-title'
 import appProductsItem from '~/components/app-products-item'
 export default {
+  props: [
+    'products'
+  ],
   components: {
     appTitle,
     appProductsItem
   },
-  computed: {
-    pruducts () {
-      let pruducts = []
-      for (let i = 0; i < 5; i++) {
-        pruducts.push({
-          src: '/dashboard.png',
-          href: 'https://github.com',
-          name: 'サンプルタイトル' + (i+1),
-          detail: 'ダミーテキストで、ダミーテキストで、ダミーテキストダミーテキストです。ダミーテキスト、ダミーテキストです。ダミーテキストです。ダミーテキストです。',
-          releasedAt: new Date()
-        })
-      }
-      return pruducts
-    }
-  }
 }
 </script>
 

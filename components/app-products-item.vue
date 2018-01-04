@@ -1,7 +1,7 @@
 <template>
   <div class="product">
     <div class="image">
-      <img :src="product.src" alt="">
+      <img :src="product.src.url" alt="">
     </div>
     <div class="info">
       <div class="name">
@@ -16,7 +16,7 @@
       <div class="link">
         <span class="text">詳細</span>
         <img src="/arrow_r.svg" alt="">
-        <a class="href" href="http://www.dummy.com" target="_blank">www.dummy.com</a>
+        <a class="href" :href="product.href" target="_blank" rel="noopener">{{product.href}}</a>
       </div>
     </div>
   </div>

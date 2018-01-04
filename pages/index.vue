@@ -3,8 +3,8 @@
     <app-canvas />
     <app-mv />
     <app-policy />
-    <app-news />
-    <app-products />
+    <app-news :news="news" />
+    <app-products :products="products" />
     <app-about />
   </div>
 </template>
@@ -24,6 +24,22 @@
       appProducts,
       appAbout,
       appCanvas
+    },
+    computed: {
+      news () {
+        return this.$store.state.news
+      },
+      products () {
+        return this.$store.state.products
+      }
+    },
+    async fetch ({store}) {
+      if (!store.state.news) {
+        await store.dispatch('fetchNews')
+      }
+      if (!store.state.products) {
+        await store.dispatch('fetchProducts')
+      }
     }
   }
 </script>

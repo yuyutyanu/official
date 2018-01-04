@@ -1,5 +1,5 @@
 <template>
-  <div class="root">
+  <div id="news" class="root">
     <div class="inner">
       <app-title title="/ttl_news.svg" type="black" />
       <div class="news">
@@ -15,6 +15,9 @@ import appTitle from '~/components/app-title'
 import appNewsItem from '~/components/app-news-item'
 import appPager from '~/components/app-pager'
 export default {
+  props: [
+    'news'
+  ],
   data () {
     return {
       p: 1
@@ -31,18 +34,6 @@ export default {
     }
   },
   computed: {
-    //@TODO cms 差し替え
-    news () {
-      let news = []
-      for (let i = 0; i < 10; i++) {
-        news.push({
-          title: 'サンプルタイトル' + (i+1),
-          detail: 'ダミーテキストで、ダミーテキストで、ダミーテキストダミーテキストです。ダミーテキスト、ダミーテキストです。ダミーテキストです。ダミーテキストです。',
-          published_at: new Date()
-        })
-      }
-      return news
-    },
     per () {
       return 3
     },

@@ -1,7 +1,7 @@
 <template>
   <div class="news">
     <div class="publishedAt">
-      {{toDateFormat(news.published_at)}}
+      {{toDateFormat(news.datetime)}}
     </div>
     <div class="title">
       {{news.title}}
@@ -24,7 +24,7 @@
 
 <style scoped>
   .publishedAt {
-    color: #999999;
+    color: #000;
     font-size: 10px;
     margin-bottom: 5px;
   }

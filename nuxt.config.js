@@ -3,14 +3,19 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Pixelgram | 合同会社ピクセルグラム',
     meta: [
-      {charset: 'utf-8'},
-      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {hid: 'description', name: 'description', content: '合同会社ピクセルグラム（Pixelgram LLC）はウェブサイトやサービスの企画・運営・開発を行っています。'}
-    ],
-    link: [
-      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:site', content: '@pixelgram' },
+      { name: 'twitter:title', content: 'Pixelgram | 合同会社ピクセルグラム' },
+      { name: 'twitter:description', content: '合同会社ピクセルグラム（Pixelgram LLC）はウェブサイトやサービスの企画・運営・開発を行っています。' },
+      { name: 'twitter:image', content: 'https://pixelgram.jp/card.jpg' },
+      { name: 'twitter:image:alt', content: 'Pixelgram Logo' },
+
+      { name: 'og:title', content: 'Pixelgram | 合同会社ピクセルグラム' },
+      { name: 'og:description', content: '合同会社ピクセルグラム（Pixelgram LLC）はウェブサイトやサービスの企画・運営・開発を行っています。' },
+      { name: 'og:type', content: 'website' },
+      { name: 'og:url', content: 'https://pixelgram.jp' },
+      { name: 'og:image', content: 'https://pixelgram.jp/card.jpg' }
     ]
   },
   plugins: [
@@ -25,12 +30,11 @@ module.exports = {
   },
   meta: {
     mobileAppIOS: true,
+    viewport: 'width=device-width, initial-scale=1',
     name: 'Pixelgram | 合同会社ピクセルグラム',
     description: '合同会社ピクセルグラム（Pixelgram LLC）はウェブサイトやサービスの企画・運営・開発を行っています。',
     theme_color: '#000',
-    lang: 'ja',
-    ogTitle: 'Pixelgram | 合同会社ピクセルグラム',
-    ogDescription: '合同会社ピクセルグラム（Pixelgram LLC）はウェブサイトやサービスの企画・運営・開発を行っています。'
+    lang: 'ja'
   },
   manifest: {
     name: 'Pixelgram',
