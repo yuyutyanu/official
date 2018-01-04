@@ -31,17 +31,8 @@ export default {
     }
   },
   computed: {
-    //@TODO cms 差し替え
     news () {
-      let news = []
-      for (let i = 0; i < 10; i++) {
-        news.push({
-          title: 'サンプルタイトル' + (i+1),
-          detail: 'ダミーテキストで、ダミーテキストで、ダミーテキストダミーテキストです。ダミーテキスト、ダミーテキストです。ダミーテキストです。ダミーテキストです。',
-          published_at: new Date()
-        })
-      }
-      return news
+      return this.$store.state.news
     },
     per () {
       return 3

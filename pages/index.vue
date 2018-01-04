@@ -21,6 +21,14 @@
       appNews,
       appProducts,
       appAbout
+    },
+    fetch ({store}) {
+      if (!store.state.news) {
+        store.dispatch('fetchNews')
+      }
+      if (!store.state.products) {
+        store.dispatch('fetchProducts')
+      }
     }
   }
 </script>

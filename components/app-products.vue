@@ -19,17 +19,7 @@ export default {
   },
   computed: {
     pruducts () {
-      let pruducts = []
-      for (let i = 0; i < 5; i++) {
-        pruducts.push({
-          src: '/dashboard.png',
-          href: 'https://github.com',
-          name: 'サンプルタイトル' + (i+1),
-          detail: 'ダミーテキストで、ダミーテキストで、ダミーテキストダミーテキストです。ダミーテキスト、ダミーテキストです。ダミーテキストです。ダミーテキストです。',
-          releasedAt: new Date()
-        })
-      }
-      return pruducts
+      return this.$store.state.products
     }
   }
 }
