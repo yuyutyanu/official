@@ -36,10 +36,22 @@ class Fish {
   }
 
   edge(){
-    if(this.location.x > this.width ) this.location.x =  0
-    if(this.location.x < 0) this.location.x = this.width
-    if(this.location.y > this.height) this.location.y = 0
-    if(this.location.y < 0) this.location.y = this.height
+    if(this.location.x > this.width ){
+      this.location.x =  0
+      this.location.y = this.p.random(0,this.height)
+    }
+    if(this.location.x < 0){
+      this.location.x = this.width
+      this.location.y = this.p.random(0,this.height)
+    }
+    if(this.location.y > this.height) {
+      this.location.y = 0
+      this.location.x = this.p.random(0,this.width)
+    }
+    if(this.location.y < 0){
+      this.location.y = this.height
+      this.location.x = this.p.random(0,this.width)
+    }
   }
 
   update () {
