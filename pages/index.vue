@@ -1,6 +1,5 @@
 <template>
   <div class="root">
-    <app-canvas />
     <app-mv />
     <app-policy v-waypoint="waypoints" />
     <app-news v-waypoint="waypoints" :news="news" />
@@ -15,7 +14,7 @@
   import appNews from '~/components/app-news'
   import appProducts from '~/components/app-products'
   import appAbout from '~/components/app-about'
-  import appCanvas from '~/components/app-canvas'
+
   export default {
     components: {
       appMv,
@@ -23,7 +22,6 @@
       appNews,
       appProducts,
       appAbout,
-      appCanvas
     },
     data () {
       return {

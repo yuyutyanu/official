@@ -1,11 +1,81 @@
 <template>
   <div id="home" class="root">
-    <canvas />
+    <div id="canvas"></div>
     <div class="moon"></div>
     <div class="copy"></div>
     <div class="scroll" v-scroll-to="'#policy'"></div>
   </div>
 </template>
+
+<script>
+  import Fish from '~/components/Fish.js'
+
+  export default{
+    mounted(){
+      const sketch = (p) => {
+        p.preload = this.preload(p)
+        p.setup = this.setup(p)
+        p.draw = this.draw(p)
+      }
+      const p5 = new this.$p5(sketch)
+      this.width = window.innerWidth
+      this.height = window.innerHeight
+      this.p5 = p5
+      window.addEventListener('resize', this.resizeCanvas)
+    },
+    beforeDestroy () {
+      window.removeEventListener('resize', this.resizeCanvas)
+    },
+    data(){
+      return {
+        fishImages: [],
+        fish: [],
+        fishType: 5,
+        width: null,
+        height: null,
+        p5:null
+      }
+    },
+    methods: {
+      resizeCanvas(){
+        this.width = window.innerWidth
+        this.height = window.innerHeight
+        this.p5.resizeCanvas(this.width, this.height);
+      },
+      preload(p){
+        for (let i = 0; i < this.fishType; i++) {
+          const fileName = this.fishType < 10 ? `/fish0${i + 1}.svg` : `/fish${i + 1}.svg`
+          for (let j = 0; j < 2; j++) {
+            this.fishImages.push(p.loadImage(fileName))
+          }
+        }
+      },
+      setup(p){
+        return () => {
+          let canvas = p.createCanvas(this.width, this.height)
+          canvas.parent('#canvas')
+          this.displayFish(p)
+        }
+      },
+      draw(p){
+        return () => {
+          p.background('#F5F5F5')
+
+          this.fish.forEach((fish) => {
+            fish.swim()
+          })
+        }
+      },
+      displayFish(p){
+        for (let i = 0; i < this.fishImages.length; i++) {
+          const f = new Fish(p, this.width, this.height, this.fishImages[i])
+          this.fish.push(f)
+          f.display()
+        }
+      }
+    }
+  }
+</script>
 
 <style scoped>
   .root {
@@ -14,6 +84,12 @@
     height: calc(100vh + 1px);
     background: url('/town.svg') repeat-x bottom;
     background-size: 1200px;
+  }
+  #canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
   }
   .moon {
     background: url('/tuki_mv.svg') no-repeat;

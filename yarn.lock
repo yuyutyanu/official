@@ -5889,12 +5889,6 @@ vue-template-es2015-compiler@^1.6.0:
 vue-waypoint@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/vue-waypoint/-/vue-waypoint-3.0.3.tgz#db1e37b1dec1393794671c5516237671b5e674a3"
-  dependencies:
-    vue "^2.5.2"
-
-vue@^2.5.2:
-  version "2.5.13"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.13.tgz#95bd31e20efcf7a7f39239c9aa6787ce8cf578e1"
 
 vue@~2.4.2:
   version "2.4.4"
