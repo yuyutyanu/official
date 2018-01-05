@@ -11,7 +11,7 @@
   .root {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh + 1px);
     background: url('/town.svg') repeat-x bottom;
     background-size: 1200px;
   }

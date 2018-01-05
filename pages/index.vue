@@ -1,10 +1,10 @@
 <template>
   <div class="root">
     <app-mv />
-    <app-policy />
-    <app-news :news="news" />
-    <app-products :products="products" />
-    <app-about />
+    <app-policy v-waypoint="waypoints" />
+    <app-news v-waypoint="waypoints" :news="news" />
+    <app-products v-waypoint="waypoints" :products="products" />
+    <app-about v-waypoint="waypoints" />
   </div>
 </template>
 
@@ -21,6 +21,26 @@
       appNews,
       appProducts,
       appAbout
+    },
+    data () {
+      return {
+        waypoints: {
+          options: {
+            root: null,
+            rootMargin: '-60% 0px',
+            thresholds: [0]
+          },
+          active: true,
+          callback: this.onWaypoint
+        }
+      }
+    },
+    methods: {
+      onWaypoint ({el, going}) {
+        if (going === this.$waypointMap.GOING_IN) {
+          console.log(el.id);
+        }
+      }
     },
     computed: {
       news () {
