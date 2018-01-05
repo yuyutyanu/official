@@ -89,7 +89,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 1;
   }
   .moon {
     background: url('/tuki_mv.svg') no-repeat;
@@ -118,6 +118,7 @@
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
+    z-index: 999;
   }
   @media screen and (max-width: 600px) {
     .root {
