@@ -59,7 +59,7 @@
       },
       draw(p){
         return () => {
-          p.background('#F5F5F5')
+          p.clear()
 
           this.fish.forEach((fish) => {
             fish.swim()
@@ -89,7 +89,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 999;
   }
   .moon {
     background: url('/tuki_mv.svg') no-repeat;
