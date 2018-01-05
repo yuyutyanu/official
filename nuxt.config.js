@@ -20,7 +20,8 @@ module.exports = {
   },
   plugins: [
     '~/plugins/scrollto',
-    { src: '~/plugins/waypoint', ssr: false }
+    { src: '~/plugins/waypoint', ssr: false },
+    { src: '~/plugins/p5.js', ssr: false}
   ],
   modules: [
     '@nuxtjs/pwa'
