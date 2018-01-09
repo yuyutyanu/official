@@ -13,16 +13,14 @@ class Fish {
 
     // 画像系
     this.fishImage = _fishImage
-    this.size = this.p.random(0.85, 1.3)
+    // this.size = this.p.random(0.85, 1.3)  todo 不具合直す
     const RIGHT_OR_LEFT = ['RIGHT', 'LEFT']
     this.direction = RIGHT_OR_LEFT[Math.floor(Math.random() * 2)]
   }
 
   display () {
-    this.edge()
-
     this.p.push()
-    this.p.scale(this.size)
+    // this.p.scale(this.size) todo 不具合直す
     this.p.imageMode(this.p.CENTER)
     // ランダムに魚の向きを決定
     if (this.direction === 'RIGHT') {
@@ -33,6 +31,8 @@ class Fish {
       this.p.image(this.fishImage, -this.location.x, this.location.y)
     }
     this.p.pop()
+    this.edge()
+
   }
 
   edge(){

@@ -41,7 +41,11 @@
       resizeCanvas(){
         this.width = window.innerWidth + this.marginX
         this.height = window.innerHeight
-        this.p5.resizeCanvas(this.width, this.height);
+        this.p5.resizeCanvas(this.width, this.height)
+        this.fish.forEach((fish)=>{
+          fish.width = this.width
+          fish.height = this.height
+        })
       },
       preload(p){
         for (let i = 0; i < this.fishType; i++) {
@@ -69,7 +73,7 @@
       },
       displayFish(p){
         for (let i = 0; i < this.fishImages.length; i++) {
-          const f = new Fish(p, this.width, this.height, this.fishImages[i])
+          const f = new Fish(p, p.width, p.height, this.fishImages[i])
           this.fish.push(f)
           f.display()
         }
