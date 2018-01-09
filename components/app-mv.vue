@@ -18,7 +18,7 @@
         p.draw = this.draw(p)
       }
       const p5 = new this.$p5(sketch)
-      this.width = window.innerWidth
+      this.width = window.innerWidth + this.marginX
       this.height = window.innerHeight
       this.p5 = p5
       window.addEventListener('resize', this.resizeCanvas)
@@ -33,18 +33,19 @@
         fishType: 5,
         width: null,
         height: null,
+        marginX : 100,
         p5:null
       }
     },
     methods: {
       resizeCanvas(){
-        this.width = window.innerWidth
+        this.width = window.innerWidth + this.marginX
         this.height = window.innerHeight
         this.p5.resizeCanvas(this.width, this.height);
       },
       preload(p){
         for (let i = 0; i < this.fishType; i++) {
-          const fileName = this.fishType < 10 ? `/fish0${i + 1}.svg` : `/fish${i + 1}.svg`
+          const fileName = this.fishType < 10 ? `/fish0${i + 1}.png` : `/fish${i + 1}.png`
           for (let j = 0; j < 2; j++) {
             this.fishImages.push(p.loadImage(fileName))
           }
@@ -84,11 +85,14 @@
     height: calc(100vh + 1px);
     background: url('/town.svg') repeat-x bottom;
     background-size: 1200px;
+    overflow: hidden;
   }
   #canvas {
     position: absolute;
+    max-width: calc(100% + 100px);
+    min-width: calc(100% + 100px);
     top: 0;
-    left: 0;
+    left: -50px;
     z-index: 1;
   }
   .moon {
